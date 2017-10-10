@@ -1,2 +1,16 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<h1>Add you new To Do List here:</h1>
+<!-- <form action="/tasks" method="post">
+  <label for="name">Name: </label>
+  <input type="text" name="task[name]" id="name">
+
+  <label for="description">Description: </label>
+  <input type="text" name="task[description]" id="description">
+
+  <input type="submit">
+</form>
+ -->
+<%= form_for(@task) do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>
